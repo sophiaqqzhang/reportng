@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" name="C:/codebase/reportng">
-        <classes><class name="com.example.reportng.ReportngApplicationTests">
+<suite name="打开百度">
+    <test verbose="2" name="检查网页标题">
+        <classes>
+            <class name="com.example.reportng.TestOpenBaidu">
             <methods>
-                <include name="contextLoads"/>
+                <include name="testOpenBaidu"/>
             </methods>
-        </class></classes>
+            </class>
+        </classes>
     </test>
+    <listeners>
+        <!--testng的XML配置文件中添加这些内容-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
 </suite>

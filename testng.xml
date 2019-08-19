@@ -6,7 +6,13 @@
             <class name="com.example.reportng.TestOpenBaidu">
             <methods>
                 <include name="testOpenBaidu"/>
+                <include name="testOpenHouse"/>
             </methods>
+            </class>
+            <class name="com.example.reportng.TestFactory">
+                <methods>
+                    <include name="createInstances"/>
+                </methods>
             </class>
         </classes>
     </test>
@@ -14,5 +20,6 @@
         <!--testng的XML配置文件中添加这些内容-->
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="com.example.reportng.ScreenshotListener"/>
     </listeners>
 </suite>
